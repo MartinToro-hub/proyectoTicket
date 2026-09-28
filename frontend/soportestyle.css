@@ -1,0 +1,285 @@
+/* ==========================================================
+   RESET Y FUENTE BASE
+   ========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0e7ff 0%, #b1cffc 100%);
+    color: #334155;
+    line-height: 1.5;
+    padding-bottom: 40px;
+}
+
+/* ==========================================================
+   ENCABEZADO
+   ========================================================== */
+.header-soporte, header {
+    background: linear-gradient(135deg, #03254c 0%, #003366 100%);
+    color: #ffffff;
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.header-brand h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.header-brand p {
+    color: #e2e8f0;
+    font-size: 0.88rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Botones de navegación y logout en header */
+.btn-nav {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-nav:hover {
+    background: #0066cc;
+    border-color: #0066cc;
+    color: #ffffff;
+}
+
+.btn-logout {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+    background: #dc2626;
+    border-color: #dc2626;
+    color: #ffffff;
+}
+
+/* ==========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================== */
+.main-soporte, main {
+    max-width: 1200px; /* Ancho extendido para acomodar la tabla */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.main-soporte h2, main h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ==========================================================
+   TABLA DE TICKETS
+   ========================================================== */
+.table-container {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    overflow-x: auto; /* Mantiene la adaptabilidad horizontal */
+    border: 1px solid #e2e8f0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.88rem;
+}
+
+thead {
+    background: linear-gradient(135deg, #03254c 0%, #003366 100%);
+    color: #ffffff;
+}
+
+th {
+    padding: 14px 18px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #002b55;
+}
+
+td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    vertical-align: middle;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.no-data {
+    text-align: center;
+    padding: 30px;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* ==========================================================
+   BADGES (ETIQUETAS)
+   ========================================================== */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* Prioridades */
+.prioridad-alta {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.prioridad-media {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.prioridad-baja {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+/* Estados */
+.estado-abierto {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.estado-en\ proceso,
+.estado-en-proceso {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.estado-resuelto {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+/* ==========================================================
+   ACCIONES Y FORMULARIOS DENTRO DE LA TABLA
+   ========================================================== */
+.acciones-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.acciones-cell form {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Botón Completar (Alineado con el gradiente principal) */
+.btn-completado {
+    background: linear-gradient(135deg, #0066cc 0%, #004080 100%);
+    color: #ffffff;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 102, 204, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-completado:hover {
+    background: linear-gradient(135deg, #0052a3 0%, #002b55 100%);
+}
+
+.btn-completado:active {
+    transform: scale(0.97);
+}
+
+/* Select de cambio de estado */
+.select-estado {
+    padding: 6px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: #0f172a;
+    background-color: #f8fafc;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.select-estado:focus {
+    border-color: #0066cc;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.12);
+}
+
+/* ==========================================================
+   DISEÑO RESPONSIVO
+   ========================================================== */
+@media (max-width: 768px) {
+    .header-soporte, header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .main-soporte, main {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+}

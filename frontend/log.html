@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Sistema de Gestión TIC</title>
+    <link rel="stylesheet" href="logstyle.css?v=2">
+</head>
+<body>
+    <div class="main-container">
+        <div class="info-panel">
+            <h1>Sistema exclusivo CFT O'Higgins</h1>
+            <ul class="features-list">
+                <li><span class="icon">🎧</span><span>Soporte Técnico</span></li>
+                <li><span class="icon">💻</span><span>Gestión de Equipos</span></li>
+            </ul>
+        </div>
+
+        <div class="login-card">
+            <div class="logo-container">
+                <img src="cftlogo.png" alt="Logo CFT O'Higgins" class="logo-img">
+            </div>
+
+            <h2>Bienvenidos</h2>
+            <h3>Sistema de Gestión TIC</h3>
+            <p class="subtitle">Iniciar Sesión</p>
+
+            <form action="login_process.php" method="POST">
+                <div class="input-group">
+                    <input type="email" name="email" required placeholder="Correo institucional">
+                </div>
+
+                <div class="input-group password-group">
+                    <input type="password" id="passwordInput" name="password" required placeholder="Contraseña">
+                    <button type="button" class="btn-toggle" onclick="togglePassword()">👁️</button>
+                </div>
+
+                <div class="form-options">
+                    <span></span>
+                    <a href="#" class="forgot-link" onclick="recuperarPassword(event)">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <button type="submit" class="btn-submit"><span>Iniciar Sesión</span></button>
+            </form>
+
+            <p class="footer-note">Acceso exclusivo para usuarios autorizados</p>
+        </div>
+    </div>
+
+    <!-- Modal de error de login -->
+    <div id="customAlert" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">Página CFT dice</div>
+            <div class="modal-body">Correo o contraseña incorrectos</div>
+            <button type="button" class="modal-btn" onclick="cerrarModal()">Aceptar</button>
+        </div>
+    </div>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
